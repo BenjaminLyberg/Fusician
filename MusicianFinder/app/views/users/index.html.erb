@@ -1,6 +1,20 @@
-<ul>
-  <% @users.each do |user| %>
-    <li><%= user.email %></li>
-  <% end %>
-</ul>
-<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+<% if !user_signed_in? %>
+    <div class="jumbotron">
+        <h1>Where Musicians Gather</h1>
+        <p>Some info about the site goes here Some info about the site goes hereSome info about the site goes hereSome info about the site goes here</p>
+        <p><%= link_to "Sign Up To Create Your Profile", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+    </div>
+<% end %>
+
+<div class="row">
+    <% @users.each do |user| %>
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <%= link_to (image_tag user.image.url(:medium)), user %>
+        </div>
+    </div>
+    <% end %>
+</div>
+
+
+<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>    
