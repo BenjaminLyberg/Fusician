@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
  <div class="container">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,7 +17,7 @@
         <li><%= link_to "Musicians", root_path, class:"active" %></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to current_user.email, user_path(current_user), class:"active" %></li>
+        <li><%= link_to current_user.first_name, user_path(current_user), class:"active" %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span></a>
           
