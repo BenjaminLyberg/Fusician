@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+          <%= image_tag @user.image.url(:medium) %>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><strong>Name:</strong></td>
+                <td>Name of user</td>
+              </tr>
+              <tr>
+                <td><strong>Age:</strong></td>
+                <td>Age of user</td>
+              </tr>
+              <tr>
+                <td><strong>Instrument:</strong></td>
+                <td>Instrument of user</td>
+              </tr>
+              <tr>
+                <td><strong>Something:</strong></td>
+                <td>Blabla</td>
+              </tr>
+            </tbody>
+          </table>
+          <%= link_to "Write a Review", root_path %>
+        </div>
+      </div>
+      <div class="col-md-7 col-md-offset-1">
+        <h1 class="review_title">CONTENT</h1>
+        <p>contentcontet</p>
+      </div>
+    </div>
+  </div>
+</div>
