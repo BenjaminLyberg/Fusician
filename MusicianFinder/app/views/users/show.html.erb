@@ -4,7 +4,7 @@
       <div class="col-md-4">
           <%= image_tag @user.image.url(:medium) %>
         <div class="table-responsive">
-          <table class="table">
+          <table class='table table-borderless'>
             <tbody>
               <tr>
                 <td><strong>Name:</strong></td>
@@ -15,7 +15,7 @@
                 <td>Age of user</td>
               </tr>
               <tr>
-                <td><strong>Instrument:</strong></td>
+                <td><strong>Main Instrument:</strong></td>
                 <td>Instrument of user</td>
               </tr>
               <tr>
@@ -24,7 +24,6 @@
               </tr>
             </tbody>
           </table>
-          <%= link_to "Write a Review", root_path %>
         </div>
       </div>
       <div class="col-md-7">
@@ -42,6 +41,18 @@
  * file per style scope.<hr>
          
          <h4 class="test">INSTRUMENTS</h4>
+         <table>
+             <tr>
+             <td>Drums</td>
+             </tr>
+             <tr>
+             <td>Guitar</td>
+             </tr>
+             <tr>
+             <td>Violin</td>
+             </tr>
+         </table>
+         
           
       </div>
     </div>
