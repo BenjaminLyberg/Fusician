@@ -15,7 +15,7 @@
             <h4 class="userMain" align="center"><%= user.first_name %></h4>
             
 <div class="btn-group">
-              <%= link_to user_like_path(user), method: :put, class: "btn btn-default btn-sm" do %>
+    <%= link_to user_path(user), method: :put, class: "btn btn-default btn-sm" do %>
               
     <span class="glyphicon glyphicon-user"></span>
     Profile

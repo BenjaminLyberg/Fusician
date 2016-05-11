@@ -22,6 +22,28 @@
                 <td><strong>Something:</strong></td>
                 <td>Blabla</td>
               </tr>
+              
+                   <% if user_signed_in? %>
+              <% if @user.id != current_user.id %>
+          <div class="btn-group">
+              <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
+    <span class="glyphicon glyphicon-thumbs-up"></span>
+    Upvote
+              <%= @user.get_upvotes.size %>
+  <% end %>
+             <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
+    <span class="glyphicon glyphicon-chevron-up"></span>
+    Upvote
+              <%= @user.get_upvotes.size %>
+  <% end %>
+              
+              <% end %>
+              <% end %>
+             
+         
+          
+      </div></td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -44,16 +66,8 @@
           <%= @user.instruments %>
           <hr>
           <h4 class="test">INFLUENCES</h4>
-          <% if user_signed_in? %>
-              <% if @user.id != current_user.id %>
-          <div class="btn-group pull-right">
-              <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
-    <span class="glyphicon glyphicon-chevron-up"></span>
-    Upvote
-              <%= @user.get_upvotes.size %>
-  <% end %>
-              <% end %>
-              <% end %>
+         
+          
              
          
           
