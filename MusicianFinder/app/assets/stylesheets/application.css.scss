@@ -19,12 +19,26 @@
 
 body{
     padding-top: 80px;
-    background: #AA4847;
+    background: #DFE2DB;
+}
+
+.navbar {
+        background-color: #191919;
+        background-image: none;
+    
+}
+
+.nav li {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    color: white;
 }
 
 .thumbnail {
    display: inline-block;
     margin-bottom: 50px;
+    background-color: #FFFFFF;
 }
 
 .col-md-7 {
@@ -83,7 +97,8 @@ body{
 
 .formBox{
     background: white;
-    border-radius: 0.5%
+    border-radius: 0.5%;
+    margin-bottom: 50px;
 }
 
 .regHead{
