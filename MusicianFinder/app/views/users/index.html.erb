@@ -1,7 +1,7 @@
 <% if !user_signed_in? %>
     <div class="jumbotron">
         <h1>Where Musicians Gather</h1>
-        <p>Some info about the site goes here Some info about the site goes here<br> Some info about the site goes hereSome info about the site goes here</p>
+        <p>Looking for bandmembers, or just want to show your skills?</p>
         <p><%= link_to "Sign Up To Create Your Profile", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
     </div>
 
@@ -19,34 +19,32 @@
            <div class="text-center">
             <%= link_to (image_tag user.image.url(:medium)), user %>
             <h4 class="userMain" align="center"><%= user.first_name %></h4>
-            
+
 <div class="btn-group">
     <%= link_to user_path(user), class: "btn btn-default btn-sm" do %>
-              
+
     <span class="glyphicon glyphicon-user"></span>
     Profile
-              
+
   <% end %>
             <% if user_signed_in? %>
              <%= link_to user_like_path(user), method: :put, class: "btn btn-default btn-sm" do %>
-              
+
     <span class="glyphicon glyphicon-chevron-up"></span>
     Upvote
               <%= user.get_upvotes.size %>
   <% end %>
     <% end %>
-              
-             
-         
-          
+
+
+
+
       </div>
       </div>
-       
-       
-       
+
+
+
         </div>
     </div>
     <% end %>
 </div>
-
-
