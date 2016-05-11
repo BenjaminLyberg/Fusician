@@ -28,12 +28,16 @@ body{
     
 }
 
-.nav li {
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: -10px;
-    color: white;
+.navbar .nav > li > a {
+    float: none;
+    padding-top: 20px;
+    padding-left: 30px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color:  #ddd;
 }
+
+
 
 .thumbnail {
    display: inline-block;
@@ -55,7 +59,7 @@ body{
 }
 
 .mainLogo {
-    padding-top: 5px;
+    padding-top: 12px;
     text-decoration: none;
 }
 
