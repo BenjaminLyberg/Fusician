@@ -27,12 +27,12 @@
               <% if @user.id != current_user.id %>
           <div class="btn-group">
               <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
-    <span class="glyphicon glyphicon-thumbs-up"></span>
-    Upvote
-              <%= @user.get_upvotes.size %>
+    <span class="glyphicon glyphicon-envelope"></span>
+    Mail
+              
   <% end %>
              <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
-    <span class="glyphicon glyphicon-chevron-up"></span>
+    <span class="glyphicon glyphicon-thumbs-up"></span>
     Upvote
               <%= @user.get_upvotes.size %>
   <% end %>
