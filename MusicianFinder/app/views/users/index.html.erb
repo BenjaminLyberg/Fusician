@@ -10,10 +10,19 @@
     <% @users.each do |user| %>
     <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
+           <div class="text-center">
             <%= link_to (image_tag user.image.url(:medium)), user %>
-            <h4 class="userMain"><%= user.first_name %></h4>
-<div class="btn-group pull-right">
+            <h4 class="userMain" align="center"><%= user.first_name %></h4>
+            
+<div class="btn-group">
               <%= link_to user_like_path(user), method: :put, class: "btn btn-default btn-sm" do %>
+              
+    <span class="glyphicon glyphicon-user"></span>
+    Profile
+              
+  <% end %>
+             <%= link_to user_like_path(user), method: :put, class: "btn btn-default btn-sm" do %>
+              
     <span class="glyphicon glyphicon-chevron-up"></span>
     Upvote
               <%= user.get_upvotes.size %>
@@ -23,6 +32,10 @@
          
           
       </div>
+      </div>
+       
+       
+       
         </div>
     </div>
     <% end %>
