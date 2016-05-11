@@ -1,9 +1,10 @@
+
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
  <div class="container">
  
   <div class="navbar-header">
    <div class="mainLogo">
-          <%= link_to image_tag('Drawing.png'), root_path, :style => 'none' %>
+          <%= link_to image_tag('Drawing4.png'), root_path, :style => 'none' %>
       </div>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
       <span class="icon-bar"></span>
@@ -32,7 +33,7 @@
          </ul>
         </li>
       <% else %>
-    <ul class="nav navbar-nav navbar-left">
+    <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Sign Up", new_user_registration_path, class:"active" %></li>
         <li><%= link_to "Sign in", new_user_session_path, class:"active" %></li>
     </ul>  

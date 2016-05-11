@@ -19,11 +19,30 @@
 
 body{
     padding-top: 80px;
-    background: #AA4847;
+    background: #DFE2DB;
 }
+
+.navbar {
+        background-color: #191919;
+        background-image: none;
+    
+}
+
+.navbar .nav > li > a {
+    float: none;
+    padding-top: 20px;
+    padding-left: 30px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color:  #ddd;
+}
+
+
 
 .thumbnail {
    display: inline-block;
+    margin-bottom: 50px;
+    background-color: #FFFFFF;
 }
 
 .col-md-7 {
@@ -40,7 +59,7 @@ body{
 }
 
 .mainLogo {
-    padding-top: 5px;
+    padding-top: 12px;
     text-decoration: none;
 }
 
@@ -73,14 +92,17 @@ body{
 }
 
  .btn{
-  border:0px solid transparent; /* this was 1px earlier */
+  border:0px solid transparent;
  }
+
+
 
 // REGISTER PAGE START //
 
 .formBox{
     background: white;
-    border-radius: 0.5%
+    border-radius: 0.5%;
+    margin-bottom: 50px;
 }
 
 .regHead{
@@ -94,3 +116,13 @@ body{
 }
 
 // REGISTER PAGE END //
+
+
+// PROFILE PAGE START //
+
+.test {
+    margin-top: 40px;
+}
+
+
+// PROFILE PAGE END //

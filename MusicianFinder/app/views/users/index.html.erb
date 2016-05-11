@@ -4,11 +4,13 @@
         <p>Some info about the site goes here Some info about the site goes hereSome info about the site goes hereSome info about the site goes here</p>
         <p><%= link_to "Sign Up To Create Your Profile", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
     </div>
-<% end %>
+
 
 <div class="featureHead">
    <h3>Featured artists</h3>
 </div>
+
+<% end %>
 
 <div class="row">
     <% @users.each do |user| %>
@@ -25,12 +27,14 @@
     Profile
               
   <% end %>
+            <% if user_signed_in? %>
              <%= link_to user_like_path(user), method: :put, class: "btn btn-default btn-sm" do %>
               
     <span class="glyphicon glyphicon-chevron-up"></span>
     Upvote
               <%= user.get_upvotes.size %>
   <% end %>
+    <% end %>
               
              
          
