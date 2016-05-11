@@ -44,6 +44,16 @@
           <%= @user.instruments %>
           <hr>
           <h4 class="test">INFLUENCES</h4>
+          <% if !@user == current_user.id %>
+          <div class="btn-group pull-right">
+              <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
+    <span class="glyphicon glyphicon-chevron-up"></span>
+    Upvote
+              <%= @user.get_upvotes.size %>
+  <% end %>
+              <% end %>
+              
+              
          
           
       </div>

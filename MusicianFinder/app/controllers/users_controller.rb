@@ -7,4 +7,10 @@ class UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
     end
+    
+    def upvote
+        @user = User.find(params[:user_id])
+        @user.upvote_by current_user
+        redirect_to :back
+    end
 end
