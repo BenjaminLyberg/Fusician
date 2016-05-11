@@ -24,6 +24,7 @@ body{
 
 .thumbnail {
    display: inline-block;
+    margin-bottom: 50px;
 }
 
 .col-md-7 {
@@ -73,8 +74,10 @@ body{
 }
 
  .btn{
-  border:0px solid transparent; /* this was 1px earlier */
+  border:0px solid transparent;
  }
+
+
 
 // REGISTER PAGE START //
 
@@ -94,3 +97,13 @@ body{
 }
 
 // REGISTER PAGE END //
+
+
+// PROFILE PAGE START //
+
+.test {
+    margin-top: 40px;
+}
+
+
+// PROFILE PAGE END //
