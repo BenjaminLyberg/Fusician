@@ -37,6 +37,19 @@ body{
     color:  #ddd;
 }
 
+footer.footer {
+    background-color: #191919;
+    border-top: solid 1px white;
+}
+
+footer li {
+    color: white;
+}
+
+footer ul {
+    text-align: center;
+}
+
 .jumbotron {
     background-image: url("background1.jpg");
 }
@@ -76,10 +89,11 @@ body{
 }
 
 .footer {
-    background: white;
+    
 
     .liLine{
-        display: inline;
+        display: inline-block;
+        text-align: center;
     }
 }
 
