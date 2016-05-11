@@ -11,6 +11,18 @@
     <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
             <%= link_to (image_tag user.image.url(:medium)), user %>
+            <h4 class="userMain"><%= user.first_name %></h4>
+<div class="btn-group pull-right">
+              <%= link_to user_like_path(user), method: :put, class: "btn btn-default btn-sm" do %>
+    <span class="glyphicon glyphicon-chevron-up"></span>
+    Upvote
+              <%= user.get_upvotes.size %>
+  <% end %>
+              
+             
+         
+          
+      </div>
         </div>
     </div>
     <% end %>
