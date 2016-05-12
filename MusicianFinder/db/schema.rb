@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510120205) do
+ActiveRecord::Schema.define(version: 20160512110057) do
 
   create_table "instruments", force: :cascade do |t|
     t.string   "name"
@@ -43,6 +43,10 @@ ActiveRecord::Schema.define(version: 20160510120205) do
     t.string   "main_instrument"
     t.string   "genre"
     t.string   "instruments"
+    t.text     "about"
+    t.text     "influences"
+    t.text     "experience"
+    t.text     "gear"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
