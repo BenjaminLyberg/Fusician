@@ -27,6 +27,7 @@
                 <td>Blabla</td>
               </tr>
               
+              
                    <% if user_signed_in? %>
               <% if @user.id != current_user.id %>
           <div class="btn-group">
@@ -51,6 +52,7 @@
             </tbody>
           </table>
         </div>
+        
       </div>
       <div class="col-md-7">
         <h4>ABOUT</h4>
@@ -72,8 +74,19 @@
           <h4 class="test">GEAR</h4>
           <hr>
           <%= @user.gear %>
+          <h4 class="test">FRIENDS</h4>
+          <hr>
+          <ul class="friends">
+          <% @user.friends.each do |friend| %>
+          <li>
+           <div class="thumbnail">
+          <%= link_to (image_tag friend.image.url(:thumb)), friend %>
+          <%= friend.username %>
+          </div>
+          </li>
+          <% end %>
+          </ul>
           
-        
          
           
              
