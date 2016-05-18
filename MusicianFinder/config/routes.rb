@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :users do
         put "like", to: "users#upvote"
         get "accept", to: "users#acceptFriend"
+        put "connect", to: "users#connect"
         get '/connections' => 'users#connections'
         
     end

@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     end
     
     def connect
+        @user = User.find(params[:user_id])
+        current_user.friend_request(@user)
+        flash[:success] = "Requested to connect with #{@user.username}!"
+        redirect_to :back
     end
     
     def acceptFriend
