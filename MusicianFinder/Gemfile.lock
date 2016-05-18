@@ -88,6 +88,7 @@ GEM
     json (1.8.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
+    magnific-popup-rails (1.1.0)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     mime-types (3.0)
@@ -193,6 +194,7 @@ DEPENDENCIES
   has_friendship
   jbuilder (~> 2.0)
   jquery-rails
+  magnific-popup-rails (~> 1.1.0)
   paperclip (~> 4.3, >= 4.3.6)
   rails (= 4.2.5)
   sass-rails (~> 5.0)
