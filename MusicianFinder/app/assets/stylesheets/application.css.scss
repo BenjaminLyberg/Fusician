@@ -187,8 +187,30 @@ footer ul {
     float: left;
 }
 
+hr {
+    margin-top: 0;
+}
+
 
 // PROFILE PAGE END //
+
+
+// CONNECTION PAGE START //
+
+.pendingH {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.connectionH {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+// CONNECTION PAGE END //
+
+
+// FOOTER START //
 footer {
   color: white;
 }
@@ -234,3 +256,5 @@ h6 {
 p {
   font-size: 15px;
 }
+
+// FOOTER END //

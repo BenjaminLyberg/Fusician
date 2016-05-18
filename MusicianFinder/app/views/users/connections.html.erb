@@ -3,6 +3,8 @@
       <div class="content">
        <% if user_signed_in? %>
             <% if @user.id == current_user.id %>
+            <h4 class="pendingH">PENDING CONNECTION REQUESTS</h4>
+            <hr>
       <% @user.requested_friends.each do |friend| %>
                   <div class="thumbnail">
                       <%= link_to (image_tag friend.image.url(:thumb)), friend %>
@@ -12,6 +14,24 @@
             
             <% end %>
         <% end %>
+        
+        <h4 class="connectionH">CONNECTIONS</h4>
+          <hr>
+          <div class="friendList">
+          <ul class="friends">
+          <% @user.friends.each do |friend| %>
+          <li>
+           <div class="thumbnail">
+          <%= link_to (image_tag friend.image.url(:thumb)), friend %>
+          <%= friend.username %>
+          </div>
+          </li>
+           
+          <% end %>
+          </ul>
+          </div>
+        
+        
         </div>
     </div>
 </div>
