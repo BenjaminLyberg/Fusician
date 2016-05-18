@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     root 'users#index'
     resources :users do
         put "like", to: "users#upvote"
+        get "accept", to: "users#acceptFriend"
         get '/connections' => 'users#connections'
         
     end

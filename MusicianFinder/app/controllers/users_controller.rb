@@ -15,6 +15,12 @@ class UsersController < ApplicationController
     def connect
     end
     
+    def acceptFriend
+        @user = User.find(params[:user_id])
+        current_user.accept_request(@user)
+        redirect_to :back
+    end
+    
     def upvote
         @user = User.find(params[:user_id])
         @user.upvote_by current_user

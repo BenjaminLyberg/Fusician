@@ -42,9 +42,28 @@
               <%= @user.get_upvotes.size %>
               
   <% end %>
-             <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
+              <% current_user.friends.each do |friend| %>
+              <% if friend == @user %>
+             <%= link_to "#", class: "btn btn-default btn-sm" do %>
+    <span class="glyphicon glyphicon-music"</span>
+    Your connection
+              <% end %>
+              <% else %>
+              
+              <%= link_to user_accept_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
     <span class="glyphicon glyphicon-music"></span>
     Connect
+              
+  <% end %>
+             
+              
+              
+            
+            
+              <% end %>
+             
+             
+             
               <% end %>             
               
               <% end %>
