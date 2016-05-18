@@ -40,7 +40,12 @@
     <span class="glyphicon glyphicon-thumbs-up"></span>
     Upvote
               <%= @user.get_upvotes.size %>
+              
   <% end %>
+             <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
+    <span class="glyphicon glyphicon-music"></span>
+    Connect
+              <% end %>             
               
               <% end %>
               <% end %>
@@ -54,7 +59,9 @@
         </div>
         
       </div>
+      
       <div class="col-md-7">
+       <div class="content">
         <h4>ABOUT</h4>
         <hr>
           <%= @user.about %>
@@ -74,8 +81,9 @@
           <h4 class="test">GEAR</h4>
           <hr>
           <%= @user.gear %>
-          <h4 class="test">FRIENDS</h4>
+           <h4 class="test">CONNECTIONS(<%= link_to "show all", user_connections_path(@user)  %>)</h4>
           <hr>
+          <div class="friendList">
           <ul class="friends">
           <% @user.friends.each do |friend| %>
           <li>
@@ -84,8 +92,12 @@
           <%= friend.username %>
           </div>
           </li>
+           
           <% end %>
           </ul>
+          </div>
+          
+          </div>
           
          
           

@@ -8,8 +8,12 @@ Rails.application.routes.draw do
     root 'users#index'
     resources :users do
         put "like", to: "users#upvote"
+        get '/connections' => 'users#connections'
         
     end
+    
+    
+    
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

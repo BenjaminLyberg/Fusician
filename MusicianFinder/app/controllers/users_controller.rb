@@ -8,6 +8,13 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end
     
+    def connections 
+        @user = User.find(params[:user_id])
+    end
+    
+    def connect
+    end
+    
     def upvote
         @user = User.find(params[:user_id])
         @user.upvote_by current_user

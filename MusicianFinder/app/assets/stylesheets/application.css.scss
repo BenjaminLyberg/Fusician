@@ -24,6 +24,10 @@ body{
     background: #DFE2DB;
 }
 
+.panel-body {
+    min-height: 700px;
+}
+
 .navbar {
         background-color: #191919;
         background-image: none;
@@ -72,7 +76,7 @@ footer ul {
 
 .thumbnail {
    display: inline-block;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     background-color: #FFFFFF;
 }
 
@@ -134,6 +138,7 @@ footer ul {
 .formBox{
     margin: auto;
     width: 400px;
+    min-height: 700px;
     background: white;
     border-radius: 1%;
     margin-bottom: 50px;
@@ -176,6 +181,10 @@ footer ul {
     display: inline;
     list-style-type: none;
     
+}
+
+.friendsList {
+    float: left;
 }
 
 
