@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     def acceptFriend
         @user = User.find(params[:user_id])
         current_user.accept_request(@user)
+        flash[:success] = "You are now connected to #{@user.username}!"
         redirect_to :back
     end
     
