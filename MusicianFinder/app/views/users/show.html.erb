@@ -7,39 +7,39 @@
     <span class="profile-title"><%= @user.instruments %><br><br>
     Age: 28<br><br>
     <%= @user.location %></span>
-   
+
   </div>
   </div>
-  
+
 
 <div class="content">
-       <div class="col-md-7"> 
+       <div class="col-md-7">
         <h4 class="test">ABOUT</h4>
         <hr>
           <%= @user.about %>
-         
+
          <h4 class="test">INSTRUMENTS</h4>
          <hr>
           <%= @user.instruments %>
-          
+
           <h4 class="test">INFLUENCES</h4>
           <hr>
           <%= @user.influences %>
-          
+
           <h4 class="test">PRIOR EXPERIENCE</h4>
           <hr>
           <%= @user.experience %>
-          
+
           <h4 class="test">GEAR</h4>
           <hr>
           <%= @user.gear %>
            </div>
-          
+
           <div class="col-md-4">
            <h4 class="test">CONNECTIONS(<%= link_to "show all", user_connections_path(@user)  %>)</h4>
           <hr>
-   
-         
+
+
           <div class="friendList">
           <ul class="friends">
           <% @user.friends.each do |friend| %>
@@ -49,13 +49,29 @@
           <%= friend.username %>
           </div>
           </li>
-           
+
           <% end %>
           </ul>
           </div>
-          
+
     </div>
-      </div>    
-    
-          
+      </div>
+
+
  </div>
+<div class = "col-md-6">
+ <h3 class="comments_title">
+   <%= @user.comments.count %> Comments
+ </h3>
+
+ <div id="comments">
+   <%= render :partial => @user.comments %>
+ </div>
+<%= simple_form_for [@user, Comment.new] do |f| %>
+<div class="field">
+  <%= f.text_area :body, class: "form-control" %>
+</div>
+<br>
+<%= f.submit "Add Comment", class: "btn btn-primary" %>
+<% end %>
+</div>
