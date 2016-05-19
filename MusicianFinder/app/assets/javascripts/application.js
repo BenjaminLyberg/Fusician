@@ -17,36 +17,27 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
-	$('.popup-with-zoom-anim').magnificPopup({
-		type: 'inline',
-
-		fixedContentPos: false,
-		fixedBgPos: true,
-
-		overflowY: 'auto',
-
-		closeBtnInside: true,
-		preloader: false,
-		
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
-	});
-
-	$('.popup-with-move-anim').magnificPopup({
-		type: 'inline',
-
-		fixedContentPos: false,
-		fixedBgPos: true,
-
-		overflowY: 'auto',
-
-		closeBtnInside: true,
-		preloader: false,
-		
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-slide-bottom'
-	});
+$(document).ready(function () {
+  
+  var popup = $("#popup"),
+      doc = $(document),
+      popClass = "popped",
+      showPopup = function (event) {
+        popup.fadeIn(200);
+        event.preventDefault();
+      },
+      hidePopup = function (event) {
+        popup.hide();
+        event.preventDefault();
+      };
+  
+  doc.on("click", "#open-popup", showPopup);
+  doc.on("click", ".popup__close", hidePopup);
+  
+  doc.keypress(function (event) {
+    if (event.keyCode === 27) { // esc key
+      hidePopup();
+    }
+  });
+  
 });
