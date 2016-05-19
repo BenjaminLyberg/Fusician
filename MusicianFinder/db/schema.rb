@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 20160516171542) do
 
   create_table "friendships", force: :cascade do |t|
@@ -22,6 +23,13 @@ ActiveRecord::Schema.define(version: 20160516171542) do
     t.integer  "blocker_id"
     t.integer  "status"
   end
+=======
+<<<<<<< Updated upstream
+ActiveRecord::Schema.define(version: 20160512121858) do
+=======
+ActiveRecord::Schema.define(version: 20160512103647) do
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
   create_table "instruments", force: :cascade do |t|
     t.string   "name"
