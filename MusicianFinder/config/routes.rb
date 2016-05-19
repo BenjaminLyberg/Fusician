@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :instruments
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
@@ -11,11 +12,11 @@ Rails.application.routes.draw do
         get "accept", to: "users#acceptFriend"
         put "connect", to: "users#connect"
         get '/connections' => 'users#connections'
-        
+        resources :comments
     end
-    
-    
-    
+
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
