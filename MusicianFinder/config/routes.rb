@@ -12,7 +12,8 @@ Rails.application.routes.draw do
         get "accept", to: "users#acceptFriend"
         put "connect", to: "users#connect"
         get '/connections' => 'users#connections'
-        resources :comments
+        resources :comments do
+        end
     end
 
 

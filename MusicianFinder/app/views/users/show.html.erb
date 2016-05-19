@@ -70,6 +70,7 @@
 <%= simple_form_for [@user, Comment.new] do |f| %>
 <div class="field">
   <%= f.text_area :body, class: "form-control" %>
+    <%= f.input :poster_id, :as => :hidden, :input_html => { :value => current_user.username } %>
 </div>
 <br>
 <%= f.submit "Add Comment", class: "btn btn-primary" %>
