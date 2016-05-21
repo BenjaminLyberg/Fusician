@@ -8,7 +8,7 @@
 		<hr class="commentSep">
 
 		<div class="btn-group pull-right">
-			<% if comment.user == current_user -%>
+            <% if comment.user == current_user || admin_signed_in? %>
 				<%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-default" %>
 			<% end %>
 		</div>
