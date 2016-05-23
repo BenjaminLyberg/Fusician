@@ -38,7 +38,7 @@
    
    
     <% if admin_signed_in? %>
-    <%= link_to admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } do%>
+    <%= link_to admin_destroy_user_path(user), method: :delete, class: "btn btn-defaul btn-sm", data: { confirm: "You sure?" } do%>
 
     <span class="glyphicon glyphicon-remove"></span>
     Delete
