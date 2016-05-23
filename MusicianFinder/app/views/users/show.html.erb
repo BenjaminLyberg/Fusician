@@ -59,7 +59,7 @@
 
 
  </div>
-<div class = "col-md-6">
+<div class = "col-md-12">
  <h3 class="comments_title">
    <%= @user.comments.count %> Comments
  </h3>
@@ -67,9 +67,10 @@
  <div id="comments">
    <%= render :partial => @user.comments %>
  </div>
+ <% if user_signed_in? %>
 <%= simple_form_for [@user, Comment.new] do |f| %>
 <div class="field">
-  <%= f.text_area :body, class: "form-control" %>
+  <%= f.text_area :body, class: "form-control", cols: "30", rows: "10"  %>
     <% if admin_signed_in? %>
     <%= f.input :poster_id, :as => :hidden, :input_html => { :value => current_admin.email } %>
     <% else %>
@@ -79,4 +80,7 @@
 <br>
 <%= f.submit "Add Comment", class: "btn btn-primary" %>
 <% end %>
+    <% else %>
+    NOT A USER?
+    <% end %>
 </div>

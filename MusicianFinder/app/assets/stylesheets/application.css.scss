@@ -83,13 +83,15 @@ footer ul {
 
 .col-md-7 {
     word-wrap: break-word;
-    padding-left: 0;
+    padding: 20px;
     background-color: white;
     margin-bottom: 30px;
 }
 
 .col-md-4 {
     padding-right: 0;
+    padding-left: 100px;
+    padding-top: 20px;
 }
 
 .table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
@@ -199,6 +201,10 @@ hr {
     margin-top: 0;
 }
 
+.col-md-12 {
+    padding-bottom: 20px;
+}
+
 
 // PROFILE PAGE END //
 
@@ -295,7 +301,7 @@ p {
 
 .profile-img {
   display: block;
-  height: 7em;
+  height: 9em;
   margin-right: auto;
   margin-left: auto;
   border: .5em solid #f2f2f2;

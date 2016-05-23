@@ -37,10 +37,13 @@
   <% end %>
    
    
+    <% if admin_signed_in? %>
     <%= link_to admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } do%>
 
     <span class="glyphicon glyphicon-remove"></span>
     Delete
+    
+    <% end %>
 
   <% end %>
    
