@@ -5,36 +5,9 @@
   <div class="profile-text">
     <h1 class="profile-name"><%= @user.username %><br><br>
         <% if user_signed_in? || admin_signed_in? %>
-        <% if !admin_signed_in? %>
+        <% if current_user != @user && !admin_signed_in? %>
           <div class="btn-group">
-              <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
-    <span class="glyphicon glyphicon-envelope"></span>
-    Mail
-              
-  <% end %>
-             <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
-    <span class="glyphicon glyphicon-thumbs-up"></span>
-    Upvote
-              <%= @user.get_upvotes.size %>
-              
-  <% end %>
             
-              <%if user_signed_in? %>
-              <%if !@user.friends_with?(current_user)%>
-             
-                  <%= link_to user_connect_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
-    <span class="glyphicon glyphicon-music"></span>
-    Connect
-           
-              <% end %>
-            
-            
-  <% end %>
-            
-            
-<% else %>
-             
-              <% end %>
              
              
              
@@ -51,13 +24,7 @@
     <span class="profile-title"><%= @user.instruments %><br><br>
     Age: 28<br><br>
     <%= @user.location %><br><br>
-        <%if admin_signed_in? || user_signed_in? %>
-        <%if admin_signed_in? || @user.friends_with?(current_user)  %>
-    <span class="glyphicon glyphicon-music"></span>
-    Your connection
-        <% else %>
-        <% end %>
-        <% end %>
+        
         
         
         

@@ -18,7 +18,7 @@
   <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-left">
        <% if user_signed_in? %>
-        <li><%= link_to "Profile", user_path(current_user), class:"active" %></li>
+        <li><%= link_to "Profile", users_profile_path, class:"active" %></li>
         <li><%= link_to "Musicians", root_path, class:"active" %></li>
         <li><%= link_to "Connections", user_connections_path(current_user), class:"active" %></li>
         <li><%= link_to "Search", search_index_path, class:"active" %></li>

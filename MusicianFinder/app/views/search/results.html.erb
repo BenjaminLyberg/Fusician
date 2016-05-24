@@ -24,7 +24,11 @@
     <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
            <div class="text-center">
+               <% if user == current_user %>
+               <%= link_to (image_tag user.image.url(:medium)), users_profile_path %>
+               <% else %>
                <%= link_to (image_tag user.image.url(:medium)), user %>
+               <% end %>
                <h4 class="userMain" align="center"><%= user.username %></h4>
                
 
