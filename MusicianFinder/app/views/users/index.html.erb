@@ -12,6 +12,9 @@
 
 <% end %>
 
+<% if !@users.present? %>
+<p>There are currently no registered musicians located in <%= params[:search] %>.</p>
+<% end %>
 <div class="row">
     <% @users.each do |user| %>
     <div class="col-sm-6 col-md-3">

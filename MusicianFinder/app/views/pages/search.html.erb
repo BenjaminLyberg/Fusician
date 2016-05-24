@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+      <div class="content">
+        <div class="search-container">     
+        <h2>SEARCH MUSICIANS BY LOCATION</h2>
+          <%= form_tag(users_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: "search-field" %><br><br>
+                <%= submit_tag "Search" %>
+                
+            <% end %>
+            
+            
+          
+         </div>
+      </div>
+    </div>
+</div>
