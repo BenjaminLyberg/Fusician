@@ -23,10 +23,15 @@
 body{
     padding-top: 80px;
     background: #DFE2DB;
+    font-family: 'Lato', sans-serif;
+     
 }
 
 .panel-body {
     min-height: 700px;
+    font-family: 'Lato', sans-serif;
+
+    
 }
 
 .navbar {
@@ -42,6 +47,8 @@ body{
     text-decoration: none;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     color:  #ddd;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
 }
 
 button.navbar toggle {
@@ -126,6 +133,11 @@ footer ul {
     text-decoration: none;
 }
 
+.userMain {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
 .footer {
 
     .liLine{
@@ -134,10 +146,8 @@ footer ul {
     }
 }
 
-.userMain {
-    text-align: center;
 
-}
+
 
 .featureHead{
     background: white;
@@ -240,11 +250,14 @@ hr {
 .pendingH {
     margin-top: 0;
     margin-bottom: 0;
+    font-family: 'Lato', sans-serif;
+
 }
 
 .connectionH {
     margin-top: 20px;
     margin-bottom: 0;
+    font-family: 'Lato', sans-serif;
 }
 
 // CONNECTION PAGE END //
@@ -351,6 +364,7 @@ p {
   border-bottom: 1px solid rgba(0,0,0,0.1);
   font-size: 1.5em;
   text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
 }
 
 .profile-title {
@@ -367,7 +381,8 @@ p {
 
 .lead {
     color: black;
-    font-size: 1em;
+    font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
 }
 
 .commentSep {
@@ -375,16 +390,15 @@ p {
     
 }
 
-.comments_wrapper.clearfix {
 
-}
 
 .commenttext {
     background: black;
+   
 }
 
 .comments_title {
-    
+     font-family: 'Lato', sans-serif;
 }
 // COMMENTS END //
 
