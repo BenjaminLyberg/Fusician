@@ -3,15 +3,20 @@
 		<div class="pull-left">
 			<p class="lead"><%= comment.body %></p>
 			<p class ="lead"><small>Submitted <strong><%= time_ago_in_words(comment.created_at) %> ago</strong> by <%= comment.poster_id %></small></p>
-			
+
 		</div>
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> 0e82047a43c39af34b49092b457d11da2a8a9a1c
 
 		<div class="btn-group pull-right">
             <% if comment.user == current_user || admin_signed_in? %>
 				<%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-default" %>
 			<% end %>
 		</div>
+		<hr class="commentSep">
 	</div>
 	<hr class="commentSep">
 <% end %>
