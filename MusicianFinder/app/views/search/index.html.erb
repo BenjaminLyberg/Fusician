@@ -7,7 +7,7 @@
         <div class="search-container">     
         <h2>SEARCH MUSICIANS BY LOCATION</h2>
          <br>
-          <%= form_tag(users_path, :method => "get", id: "search-form")  do %>
+            <%= form_tag(search_results_path, :method => "get", id: "search-form")  do %>
            
         
             <%= awesomplete_field(:search, collection: @cities, placeholder: "Location") %>
