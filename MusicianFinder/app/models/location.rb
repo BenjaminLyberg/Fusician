@@ -1,3 +1,3 @@
 class Location < ActiveRecord::Base
-    Cities = ['Oslo', 'Bergen', 'Stavanger']
+    Cities = ['Oslo, Norway', 'Bergen, Norway', 'Stavanger, Norway']
 end

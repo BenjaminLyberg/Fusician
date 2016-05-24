@@ -6,10 +6,12 @@
       <div class="content">
         <div class="search-container">     
         <h2>SEARCH MUSICIANS BY LOCATION</h2>
+         <br>
           <%= form_tag(users_path, :method => "get", id: "search-form")  do %>
            
         
             <%= awesomplete_field(:search, collection: @cities, placeholder: "Location") %>
+             <br><br>
               
                 <%= submit_tag "Search" %>
                 
