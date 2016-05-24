@@ -90,7 +90,7 @@
           <%= @user.gear %>
            </div>
 
-          <div class="col-md-4">
+          <div class="col-md-5">
           
           
          
@@ -128,7 +128,7 @@
  <% if user_signed_in? %>
 <%= simple_form_for [@user, Comment.new] do |f| %>
 <div class="field">
-  <%= f.text_area :body, class: "form-control", cols: "30", rows: "10"  %>
+  <%= f.text_area :body, class: "form-control", cols: "30", rows: "5"  %>
     <% if admin_signed_in? %>
     <%= f.input :poster_id, :as => :hidden, :input_html => { :value => current_admin.email } %>
     <% else %>

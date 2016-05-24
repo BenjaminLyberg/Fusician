@@ -48,6 +48,23 @@ button.navbar toggle {
 
 }
 
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -7em;
+}
+.footer, .push {
+height: 4em;
+}
+
 footer.footer {
     background-color: #191919;
     border-top: solid 1px white;
@@ -81,6 +98,10 @@ footer ul {
     background-color: #FFFFFF;
 }
 
+.col-md-12 {
+    padding-bottom: 50px;
+}
+
 .col-md-7 {
     word-wrap: break-word;
     padding: 20px;
@@ -88,10 +109,12 @@ footer ul {
 
 }
 
+.col-md-5 {
+    padding: 20px;
+}
+
 .col-md-4 {
-    padding-right: 0;
     
-    padding-top: 20px;
 }
 
 .table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
@@ -229,6 +252,7 @@ hr {
 
 // FOOTER START //
 footer {
+  padding-top: 100px;
   color: white;
 }
 footer h3 {
@@ -352,10 +376,7 @@ p {
 }
 
 .comments_wrapper.clearfix {
-<<<<<<< HEAD
-    
-=======
->>>>>>> 0e82047a43c39af34b49092b457d11da2a8a9a1c
+
 }
 
 .commenttext {
@@ -366,13 +387,14 @@ p {
     
 }
 // COMMENTS END //
-<<<<<<< HEAD
+
 
 
 // SEARCH START //
 
 .search-container {
   text-align: center;
+    padding-top: 200px;
     
     h2 {
         font-family: 'Lato', sans-serif;
@@ -381,9 +403,9 @@ p {
 }
 
 .search-field {
+    text-align: center;
     width: 100%;
 }
 
 // SEARCH END //
-=======
->>>>>>> 0e82047a43c39af34b49092b457d11da2a8a9a1c
+
