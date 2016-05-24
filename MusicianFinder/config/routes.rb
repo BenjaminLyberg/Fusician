@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'search/index'
     get 'search/results'
     get 'users/profile'
+    get 'users/userconnections'
 
   devise_for :admins
   resources :comments

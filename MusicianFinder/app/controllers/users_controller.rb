@@ -18,6 +18,10 @@ class UsersController < ApplicationController
         @user = current_user
     end
     
+    def userconnections 
+        @user = current_user
+    end
+    
     def connections 
         @user = User.find(params[:user_id])
     end
