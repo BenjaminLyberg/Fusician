@@ -4,10 +4,26 @@
         <div class="search-container">     
         <h2>SEARCH MUSICIANS BY LOCATION</h2>
           <%= form_tag(users_path, :method => "get", id: "search-form") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Location", class: "search-field" %><br><br>
+            <%= text_field_tag :search, params[:search], placeholder: "Location", class: "awesomplete", list: "mylist" %>
+             <datalist id="mylist">
+    <option>Ada</option>
+    <option>Java</option>
+    <option>JavaScript</option>
+    <option>Brainfuck</option>
+    <option>LOLCODE</option>
+    <option>Node.js</option>
+    <option>Ruby on Rails</option>
+</datalist><br><br>
+              
                 <%= submit_tag "Search" %>
                 
             <% end %>
+            
+            
+       
+            
+  
+            
             
             
           

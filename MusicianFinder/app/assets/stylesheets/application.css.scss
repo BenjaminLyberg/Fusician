@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require awesomplete
 */
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
@@ -25,6 +26,10 @@ body{
     background: #DFE2DB;
     font-family: 'Lato', sans-serif;
      
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
 }
 
 .panel-body {

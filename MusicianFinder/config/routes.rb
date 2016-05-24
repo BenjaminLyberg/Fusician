@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'search/index'
+
   devise_for :admins
   resources :comments
   resources :instruments
