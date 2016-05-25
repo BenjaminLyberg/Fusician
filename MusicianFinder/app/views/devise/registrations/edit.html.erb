@@ -29,27 +29,27 @@
 
     <div class="form-group">
         <%= f.label :about %><br />
-        <%= f.text_field :about, autocomplete: "off", class: "form-control" %>
+        <%= f.text_area :about, placeholder: "About yourself", autocomplete: "off", class: "form-control" %>
     </div>
 
   <div class="form-group">
       <%= f.label :instruments %><br />
-      <%= f.text_field :instruments, autocomplete: "off", class: "form-control" %>
+      <%= f.text_field :instruments, placeholder: "Instruments you play", autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="form-group">
       <%= f.label :influences %><br />
-      <%= f.text_field :influences, autocomplete: "off", class: "form-control" %>
+      <%= f.text_field :influences, placeholder: "Influences", autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="form-group">
       <%= f.label :experience %><br />
-      <%= f.text_field :experience, autocomplete: "off", class: "form-control" %>
+      <%= f.text_field :experience, placeholder: "Prior experience", autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="form-group">
       <%= f.label :gear %><br />
-      <%= f.text_field :gear, autocomplete: "off", class: "form-control" %>
+      <%= f.text_field :gear, placeholder: "Gear you use", autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -69,19 +69,22 @@
 
   <div class="form-group">
       <%= f.label :image %><br />
-      <%= f.file_field :image %>
+      <%= f.file_field :image%>
   </div>
 
-  <div class="form-group">
-    <%= f.submit "Update" %>
-  </div>
+
+
+  <%= f.submit 'Update', :class => 'btn btn-block btn-primary' %>
+
+
 <% end %>
 
 <div class="form-group">
-<h3>Cancel account</h3>
+<h4>Cancel account</h4>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p>Unhappy? <%= button_to 'Delete my account', registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'btn btn-sm btn-danger' %></p>
 
-<%= link_to "Back", :back %>
+<br><br>
+<%= button_to "Back", :back, :class => 'btn btn-xs btn-primary' %>
 </div>
 </div>
