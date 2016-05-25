@@ -6,17 +6,15 @@
     </div>
 
 
+<% end %>
+
+
 <div class="featureHead">
    <h3>Featured artists</h3>
 </div>
-
-<% end %>
-
-<% if !@users.present? %>
-<p>There are currently no registered musicians located in <%= params[:search] %>.</p>
-<% end %>
 <div class="row">
     <% @users.each do |user| %>
+    <% if user.subscribed? %>
     <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
            <div class="text-center">
@@ -67,5 +65,6 @@
 
         </div>
     </div>
+    <% end %>
     <% end %>
 </div>

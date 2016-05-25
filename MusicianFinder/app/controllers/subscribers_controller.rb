@@ -19,6 +19,8 @@ class SubscribersController < ApplicationController
         current_user.stripeid = customer.id
         current_user.save
         
+        flash[:success] = "Congratulations! You are now a Premium Fusician!"
+        
         redirect_to root_path
         
     end
