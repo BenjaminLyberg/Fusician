@@ -1,4 +1,10 @@
-<%= form_tag subscribers_path do %>
+<div class="panel panel-default">
+  <div class="panel-body">
+      <div class="content">
+        <div class="sub-container">
+        <h2>BECOME A PREMIUM USER</h2>
+        
+           <%= form_tag subscribers_path do %>
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">
@@ -13,6 +19,20 @@
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="A month's subscription"
-          data-amount="500"
+          data-amount="9900"
+          data-currency="nok"
+          data-name="Fusician Premium"
+              data-image="http://localhost:3000/assets/logosmall.png"
+          
           data-locale="auto"></script>
 <% end %>
+
+            
+            
+       
+            
+  
+        </div>
+      </div>
+    </div>
+</div>
