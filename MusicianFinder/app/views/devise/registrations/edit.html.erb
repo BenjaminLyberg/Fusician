@@ -53,6 +53,11 @@
   </div>
 
   <div class="form-group">
+      <%= f.label :media %><br />
+      <%= f.text_field :media, placeholder: "Paste in embed url here", autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>

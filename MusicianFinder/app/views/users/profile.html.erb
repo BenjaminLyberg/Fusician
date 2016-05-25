@@ -7,27 +7,27 @@
         <% if user_signed_in? || admin_signed_in? %>
         <% if current_user != @user && !admin_signed_in? %>
           <div class="btn-group">
-            
-             
-             
-             
-         
-          
+
+
+
+
+
+
       </div>
              <% end %>
               <% end %>
     </h1><br><br>
-    
-      
-    
-    
+
+
+
+
     <span class="profile-title"><%= @user.instruments %><br><br>
     Age: 28<br><br>
     <%= @user.location %><br><br>
-        
-        
-        
-        
+
+
+
+
     </span>
 
   </div>
@@ -55,13 +55,21 @@
           <h4 class="test">GEAR</h4>
           <hr>
           <%= @user.gear %>
+
+          <h4 class="test">MEDIA</h4>
+          <hr>
+          <%= @user.media %>
+
+             <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/37129531&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+             <iframe width="100%" height="315" src="https://www.youtube.com/embed/KcbWfgEoQdo" frameborder="0" allowfullscreen></iframe>
            </div>
 
+
           <div class="col-md-5">
-          
-          
-         
-          
+
+
+
+
               <h4 class="test">CONNECTIONS(<%= link_to "show all", users_userconnections_path  %>)</h4>
           <hr>
 
