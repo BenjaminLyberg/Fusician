@@ -20,17 +20,36 @@
       <%= f.label :username %><br />
       <%= f.text_field :username, autocomplete: "off", class: "form-control" %>
   </div>
-  
+
   <div class="form-group">
 	  	<%= f.label :location %>
-          <%= f.collection_select :location, Location::Cities, :to_s, :to_s, 
+          <%= f.collection_select :location, Location::Cities, :to_s, :to_s,
 :include_blank => true, class: "form-control" %>
 	  </div>
-	  
+
+  <div class="form-group">
+      <%= f.label :about %><br />
+      <%= f.text_field :about, autocomplete: "off", class: "form-control" %>
+  </div>
 
   <div class="form-group">
       <%= f.label :instruments %><br />
       <%= f.text_field :instruments, autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+      <%= f.label :influences %><br />
+      <%= f.text_field :influences, autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+      <%= f.label :experience %><br />
+      <%= f.text_field :experience, autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+      <%= f.label :gear %><br />
+      <%= f.text_field :gear, autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="form-group">
