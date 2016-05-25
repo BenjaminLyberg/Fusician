@@ -26,7 +26,7 @@ var _ = function (input, o) {
 	// Setup
 
 	this.input = $(input);
-	this.input.setAttribute("autocomplete", "off");
+	this.input.setAttribute("autocomplete", "new-password");
     this.input.setAttribute("placeholder", "Enter a location")
 	this.input.setAttribute("aria-autocomplete", "list");
 

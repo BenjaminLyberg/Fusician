@@ -7,10 +7,12 @@
         <div class="search-container">     
         <h2>SEARCH MUSICIANS BY LOCATION</h2>
          <br>
-            <%= form_tag(search_results_path, :method => "get", id: "search-form")  do %>
+            <%= form_tag(search_results_path, :method => "get", id: "search-form", autocomplete: "new-password")  do %>
+            
+            <input type="password" style="display:none;">
            
         
-            <%= awesomplete_field(:search, collection: @cities, placeholder: "Location") %>
+            <%= awesomplete_field(:search, collection: @cities, placeholder: "Location", autocomplete: "off") %>
              <br><br>
               
                 <%= submit_tag "Search" %>

@@ -5,15 +5,14 @@ Rails.application.routes.draw do
     get 'users/userconnections'
 
   devise_for :admins
-  resources :comments
-  resources :instruments
-  devise_for :users
-    match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
+    devise_for :users, :controllers => { :registrations => "registrations"}
+    match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
+
     root 'users#index'
+    resources :comments
+    resources :instruments
+    resources :subscribers
 
     resources :users do
         put "like", to: "users#upvote"

@@ -4,7 +4,7 @@
        <% if user_signed_in? %>
           
           <% if @user.requested_friends.size > 0 %>
-          <h4 class="pendingH">PENDING CONNECTION REQUESTS</h4>
+          <h4 class="pendingH">Pending connection requests</h4>
             <hr>
           <% @user.requested_friends.each do |friend| %>
                   <div class="thumbnail">
