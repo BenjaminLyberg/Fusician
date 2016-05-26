@@ -42,7 +42,7 @@
             <% end %>
         <% end %>
         
-          <h4 class="connectionH"><%= @user.username %>'s connections</h4>
+          <h4 class="connectionH"><%= @user.username %>'s connections(<%= @user.friends.size %>)</h4>
           <hr>
           <div class="friendList">
           <ul class="friends">

@@ -4,7 +4,7 @@
        <% if user_signed_in? %>
           
           <% if @user.requested_friends.size > 0 %>
-          <h4 class="pendingH">Pending connection requests</h4>
+          <h4 class="pendingH">Pending connection requests(<%= @user.requested_friends.size %>)</h4>
             <hr>
           <% @user.requested_friends.each do |friend| %>
                   <div class="thumbnail">
@@ -42,7 +42,7 @@
             <% end %>
         
         
-          <h4 class="connectionH">Your connections</h4>
+          <h4 class="connectionH">Your connections(<%= @user.friends.size %>)</h4>
           <hr>
           <div class="friendList">
           <ul class="friends">

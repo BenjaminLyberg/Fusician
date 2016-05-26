@@ -105,7 +105,7 @@
 
 
           <div class="col-md-5">
-
+        <div class="friend-container">
          <h4 class="test">CONNECTIONS(<%= link_to "show all", user_connections_path(@user)  %>)</h4>
           <hr>
 
@@ -124,10 +124,13 @@
           </ul>
 
           </div>
+              </div>
 
           <h4 class="test">MEDIA</h4>
           <hr>
+          <div class="player-container">
           <iframe width="100%" height="166" scrolling="no" frameborder="no" src="<%= @user.media %>"></iframe>
+              </div>
 
 
 
