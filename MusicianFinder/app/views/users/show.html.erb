@@ -8,8 +8,8 @@
         <span class="premium-badge">Premium</span></h4><br><br>
     <% end %>
 
-        <% if user_signed_in? || admin_signed_in? %>
-        <% if !admin_signed_in? %>
+        <% if user_signed_in? %>
+        
           <div class="btn-group">
               <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
     <span class="glyphicon glyphicon-envelope"></span>
@@ -45,7 +45,7 @@
 
 
       </div>
-             <% end %>
+             
               <% end %>
     </h1><br><br>
 
@@ -55,8 +55,8 @@
     <span class="profile-title"><%= @user.instruments %><br><br>
     Age: 28<br><br>
     <%= @user.location %><br><br>
-        <%if admin_signed_in? || user_signed_in? %>
-        <%if admin_signed_in? || @user.friends_with?(current_user)  %>
+        <%if user_signed_in? %>
+        <%if @user.friends_with?(current_user)  %>
     <span class="glyphicon glyphicon-music"></span>
     Your connection
         <% else %>
@@ -146,11 +146,9 @@
 <%= simple_form_for [@user, Comment.new] do |f| %>
 <div class="field">
   <%= f.text_area :body, class: "form-control", cols: "30", rows: "5"  %>
-    <% if admin_signed_in? %>
-    <%= f.input :poster_id, :as => :hidden, :input_html => { :value => current_admin.email } %>
-    <% else %>
+    
     <%= f.input :poster_id, :as => :hidden, :input_html => { :value => current_user.username } %>
-    <% end %>
+    
 </div>
 <br>
 <%= f.submit "Add Comment", class: "btn btn-primary" %>
