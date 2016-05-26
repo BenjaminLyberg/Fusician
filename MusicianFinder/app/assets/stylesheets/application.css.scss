@@ -462,11 +462,27 @@ p {
 
 .sub-container {
     text-align: center;
-    padding-top: 200px;
+    padding-top: 250px;
     
     h2 {
        font-family: 'Lato', sans-serif;
         font-weight: 300; 
+    }
+}
+
+.premium {
+    text-align: center;
+    padding-top: 20px;
+
+    
+    h2 {
+       font-family: 'Lato', sans-serif;
+        font-weight: 800;
+    }
+    
+    h3 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
     }
 }
 
