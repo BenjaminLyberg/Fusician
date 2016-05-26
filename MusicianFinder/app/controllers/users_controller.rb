@@ -18,9 +18,7 @@ class UsersController < ApplicationController
         @user = current_user
     end
     
-    def update 
-        redirect_to edit_user_registration_path
-    end
+   
     
     def userconnections 
         @user = current_user

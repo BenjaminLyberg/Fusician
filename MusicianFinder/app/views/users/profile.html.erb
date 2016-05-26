@@ -75,7 +75,7 @@
 
           <div class="friendList">
           <ul class="friends">
-          <% @user.friends.each do |friend| %>
+          <% @user.friends[0,8].each do |friend| %>
           <li>
            <div class="thumbnail">
           <%= link_to (image_tag friend.image.url(:thumb)), friend %>
