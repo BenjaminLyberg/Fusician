@@ -25,7 +25,7 @@ body{
     padding-top: 80px;
     background: #DFE2DB;
     font-family: 'Lato', sans-serif;
-     
+
 }
 
 input::-webkit-calendar-picker-indicator {
@@ -41,13 +41,13 @@ input::-webkit-calendar-picker-indicator {
 
 
 .awesomplete {
-     height: 25px; 
-    width: 275px; 
-    background-color: transparent;  
-    border-style: solid;  
-    border-width: 0px 0px 1px 0px;  
-    border-color: darkred; 
-    outline:0; 
+     height: 25px;
+    width: 275px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: darkred;
+    outline:0;
     text-align: center;
 }
 
@@ -55,7 +55,7 @@ input::-webkit-calendar-picker-indicator {
     min-height: 700px;
     font-family: 'Lato', sans-serif;
 
-    
+
 }
 
 .navbar {
@@ -111,7 +111,7 @@ footer ul {
 
 .jumbotron {
     background-image: url("background1.jpg");
-    
+
 }
 
 .jumbotron a, p {
@@ -149,7 +149,7 @@ footer ul {
 }
 
 .col-md-4 {
-    
+
 }
 
 .table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
@@ -181,7 +181,7 @@ footer ul {
     background: white;
     border-radius: 5px;
     margin-bottom: 30px;
-    
+
 }
 
 .featureHead h3 {
@@ -430,14 +430,14 @@ p {
 
 .commentSep {
     width: 100%;
-    
+
 }
 
 
 
 .commenttext {
     background: black;
-   
+
 }
 
 .comments_title {
@@ -452,7 +452,7 @@ p {
 .search-container {
   text-align: center;
     padding-top: 200px;
-    
+
     h2 {
         font-family: 'Lato', sans-serif;
         font-weight: 300;
@@ -473,7 +473,7 @@ p {
 .premium-badge{
     margin-left: 4px;
     padding-bottom: 4px;
-    background:red;
+    background:green;
     text-align: center;
     border-radius: 30px 30px 30px 30px;
     color:white;
@@ -488,10 +488,10 @@ p {
 .sub-container {
     text-align: center;
     padding-top: 250px;
-    
+
     h2 {
        font-family: 'Lato', sans-serif;
-        font-weight: 300; 
+        font-weight: 300;
     }
 }
 
@@ -499,12 +499,12 @@ p {
     text-align: center;
     padding-top: 20px;
 
-    
+
     h2 {
        font-family: 'Lato', sans-serif;
         font-weight: 800;
     }
-    
+
     h3 {
         font-family: 'Lato', sans-serif;
         font-weight: 300;
@@ -512,4 +512,3 @@ p {
 }
 
 // SUBSCRIBE END //
-
