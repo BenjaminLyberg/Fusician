@@ -109,11 +109,10 @@
 <%= simple_form_for [@user, Comment.new] do |f| %>
 <div class="field">
   <%= f.text_area :body, class: "form-control", cols: "30", rows: "5"  %>
-    <% if admin_signed_in? %>
-    <%= f.input :poster_id, :as => :hidden, :input_html => { :value => current_admin.email } %>
-    <% else %>
+   
+    
     <%= f.input :poster_id, :as => :hidden, :input_html => { :value => current_user.username } %>
-    <% end %>
+   
 </div>
 <br>
 <%= f.submit "Add Comment", class: "btn btn-primary" %>
