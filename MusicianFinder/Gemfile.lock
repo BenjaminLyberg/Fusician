@@ -42,6 +42,12 @@ GEM
       execjs
     awesomplete (0.0.6)
       rails (~> 4.0)
+    aws-sdk (2.3.8)
+      aws-sdk-resources (= 2.3.8)
+    aws-sdk-core (2.3.8)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.3.8)
+      aws-sdk-core (= 2.3.8)
     bcrypt (3.1.11)
     bcrypt (3.1.11-x64-mingw32)
     bcrypt (3.1.11-x86-mingw32)
@@ -89,6 +95,8 @@ GEM
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    jmespath (1.2.4)
+      json_pure (>= 1.8.1)
     jquery-rails (4.1.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -96,6 +104,7 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.3)
+    json_pure (1.8.3)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -239,6 +248,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_votable (~> 0.10.0)
   awesomplete
+  aws-sdk (~> 2.3, >= 2.3.8)
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)

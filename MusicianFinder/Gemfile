@@ -58,6 +58,7 @@ gem 'awesomplete'
 gem 'stripe'
 gem 'haml'
 gem 'rails_admin'
+gem 'aws-sdk', '~> 2.3', '>= 2.3.8'
 
 group :development do
   # Use sqlite3 as the database for Active Record
