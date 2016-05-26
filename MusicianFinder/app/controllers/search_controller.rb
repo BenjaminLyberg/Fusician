@@ -9,7 +9,7 @@ class SearchController < ApplicationController
     
     def results
          if params[:search]
-            @users = User.search(params[:search]).order("created_at DESC")
+             @users = User.search(params[:search]).order("subscribed DESC")
         else
             @users = User.all.order('created_at DESC')
         end
