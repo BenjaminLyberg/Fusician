@@ -77,6 +77,8 @@ GEM
       sass (>= 3.2)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    haml (4.0.7)
+      tilt
     has_friendship (1.0.1)
       rails (~> 4.0)
       stateful_enum
@@ -217,6 +219,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise (~> 4.1)
   font-awesome-sass
+  haml
   has_friendship
   high_voltage (~> 3.0.0)
   jbuilder (~> 2.0)

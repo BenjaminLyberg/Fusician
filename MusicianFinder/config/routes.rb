@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'search/index'
     get 'search/results'
     get 'users/profile'
     get 'users/userconnections'
+    
 
   devise_for :admins
 
@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     resources :comments
     resources :instruments
     resources :subscribers
+    resources :admins
+    resources :search
 
     resources :users do
         put "like", to: "users#upvote"
