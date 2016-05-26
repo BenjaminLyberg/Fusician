@@ -1,19 +1,23 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
     get 'search/results'
     get 'users/profile'
     get 'users/userconnections'
     
 
-  devise_for :admins
+
+    
+    
 
     devise_for :users, :controllers => { :registrations => "registrations"}
+    
     match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
+    
 
     root 'users#index'
     resources :comments
     resources :instruments
     resources :subscribers
-    resources :admins
     resources :search
 
     resources :users do

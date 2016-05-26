@@ -18,6 +18,10 @@ class UsersController < ApplicationController
         @user = current_user
     end
     
+    def update 
+        redirect_to edit_user_registration_path
+    end
+    
     def userconnections 
         @user = current_user
     end
@@ -51,7 +55,7 @@ class UsersController < ApplicationController
     @user.destroy
 
     if @user.destroy
-        redirect_to root_url, notice: "User deleted."
+        redirect_to admins_path, notice: "User deleted."
     end
   end
     
