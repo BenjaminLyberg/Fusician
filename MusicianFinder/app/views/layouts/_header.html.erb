@@ -17,6 +17,9 @@
 
   <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-left">
+       
+      
+      
        <% if user_signed_in? %>
         <li><%= link_to "<span class=\"glyphicon glyphicon-user\"></span>Profile".html_safe, users_profile_path, class:"active" %></li>
         <li><%= link_to "<span class=\"glyphicon glyphicon-music\"></span>Musicians".html_safe, root_path, class:"active" %></li>
@@ -47,6 +50,7 @@
          </ul>
         </li>
       </ul>
+<<<<<<< HEAD
 
       <% elsif admin_signed_in? %>
         <li><%= link_to "Musicians", root_path, class:"active" %></li>
@@ -62,6 +66,12 @@
         </li>
       </ul>
 
+=======
+       
+    
+       
+        
+>>>>>>> origin/master
       <% else %>
     <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Sign Up", new_user_registration_path, class:"active" %></li>

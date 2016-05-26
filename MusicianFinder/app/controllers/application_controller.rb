@@ -6,13 +6,7 @@ class ApplicationController < ActionController::Base
 
     protected
     
-    def after_sign_in_path_for(resource)
-        if admin_signed_in?
-        admins_path
-        else
-            root_path
-        end
-    end
+    
 
     def configure_permitted_parameters
         devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :image, :location) }
