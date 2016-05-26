@@ -7,51 +7,51 @@
       <% if @user.subscribed? %>
         <span class="premium-badge">Premium</span></h4><br><br>
     <% end %>
-        
+
         <% if user_signed_in? || admin_signed_in? %>
         <% if !admin_signed_in? %>
           <div class="btn-group">
               <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
     <span class="glyphicon glyphicon-envelope"></span>
     Mail
-              
+
   <% end %>
              <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
     <span class="glyphicon glyphicon-thumbs-up"></span>
     Upvote
               <%= @user.get_upvotes.size %>
-              
+
   <% end %>
-            
+
               <%if user_signed_in? %>
               <%if !@user.friends_with?(current_user)%>
-             
+
                   <%= link_to user_connect_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
     <span class="glyphicon glyphicon-music"></span>
     Connect
-           
+
               <% end %>
-            
-            
+
+
   <% end %>
-            
-            
+
+
 <% else %>
-             
+
               <% end %>
-             
-             
-             
-         
-          
+
+
+
+
+
       </div>
              <% end %>
               <% end %>
     </h1><br><br>
-    
-      
-    
-    
+
+
+
+
     <span class="profile-title"><%= @user.instruments %><br><br>
     Age: 28<br><br>
     <%= @user.location %><br><br>
@@ -62,9 +62,9 @@
         <% else %>
         <% end %>
         <% end %>
-        
-        
-        
+
+
+
     </span>
 
   </div>
@@ -92,20 +92,20 @@
           <h4 class="test">GEAR</h4>
           <hr>
           <%= @user.gear %>
-          
-             
+
+
            </div>
 
-          
-          
-          
-          
-          
-          
-          
-          
+
+
+
+
+
+
+
+
           <div class="col-md-5">
-        
+
          <h4 class="test">CONNECTIONS(<%= link_to "show all", user_connections_path(@user)  %>)</h4>
           <hr>
 
@@ -124,12 +124,12 @@
           </ul>
 
           </div>
-          
+
           <h4 class="test">MEDIA</h4>
           <hr>
-          <%= @user.media %>
+          <iframe width="100%" height="166" scrolling="no" frameborder="no" src="<%= @user.media %>"></iframe>
 
-             <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/37129531&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
 
     </div>
       </div>
