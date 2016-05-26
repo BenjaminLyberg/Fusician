@@ -2,6 +2,7 @@ RailsAdmin.config do |config|
     
      config.authorize_with do |controller|
     redirect_to main_app.root_path unless current_user.try(:admin?)
+         config.main_app_name = ["FusiCian", "Admin"]
     end
 
   ### Popular gems integration
