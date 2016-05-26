@@ -1,5 +1,6 @@
 class SubscribersController < ApplicationController
     
+    before_action :check_sub
     before_filter :authenticate_user!
     
     def new
@@ -23,5 +24,11 @@ class SubscribersController < ApplicationController
         
         redirect_to root_path
         
+    end
+    
+    def check_sub
+        if current_user.subscribed?
+            redirect_to users_profile_path
+        end
     end
 end
