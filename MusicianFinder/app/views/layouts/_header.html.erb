@@ -21,7 +21,9 @@
         <li><%= link_to "Profile", users_profile_path, class:"active" %></li>
         <li><%= link_to "Musicians", root_path, class:"active" %></li>
         <% if current_user.requested_friends.size > 0 %>
-        <li><%= link_to "Connections(#{current_user.requested_friends.size} pending)", users_userconnections_path, class:"active" %></li>
+        <li><%= link_to "Connections", users_userconnections_path, class:"active" %>
+        <span class="notify-badge"><%= current_user.requested_friends.size %></span>
+        </li>
         <% else %>
         <li><%= link_to "Connections", users_userconnections_path, class:"active" %></li>
         <% end %>

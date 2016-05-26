@@ -21,6 +21,7 @@
 <% end %>
 <div class="row">
     <% @users.each do |user| %>
+    
     <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
            <div class="text-center">
@@ -29,7 +30,11 @@
                <% else %>
                <%= link_to (image_tag user.image.url(:medium)), user %>
                <% end %>
+               <% if user.subscribed? %>
+               <h4 class="userMain" align="center"><%= user.username %><span class="premium-badge">Premium</span></h4>
+               <% else %> 
                <h4 class="userMain" align="center"><%= user.username %></h4>
+               <% end %>
                
 
 <div class="btn-group">
