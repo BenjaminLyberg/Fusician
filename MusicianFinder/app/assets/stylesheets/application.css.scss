@@ -54,6 +54,7 @@ input::-webkit-calendar-picker-indicator {
 .panel-body {
     min-height: 700px;
     font-family: 'Lato', sans-serif;
+    background: white;
 
 
 }
@@ -229,6 +230,7 @@ footer ul {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-family: 'Lato', sans-serif;
 }
 
 .form-group{
@@ -267,6 +269,12 @@ footer ul {
 .player-container {
     width: 433px;;
     height: 164px;
+    text-align: center;
+    
+    h5 {
+    font-family: 'Lato', sans-serif;
+    }
+
 }
 
 hr {
