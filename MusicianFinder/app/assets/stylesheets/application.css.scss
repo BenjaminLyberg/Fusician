@@ -264,6 +264,19 @@ footer ul {
 
 .friend-container {
     min-height: 350px;
+    text-align: center;
+    
+    h5 {
+    font-family: 'Lato', sans-serif; 
+    }
+    
+    a {
+        color: #3399FF;
+    }
+    
+    a:visited {
+        color: #3399FF;
+    }
 }
 
 .player-container {

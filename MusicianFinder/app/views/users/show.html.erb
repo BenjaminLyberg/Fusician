@@ -111,6 +111,17 @@
 
 
           <div class="friendList">
+              <% if @user.friends.size == 0 %>
+              <h5>This Fusician has no connections yet</h5>
+              <% @user.requested_friends.each do |friend| %>
+              <% if friend == current_user %>
+              <h5>You have requested a connection with <%= @user.username %></h5>
+              <% else %>
+              <h5>Have you played together? Click <%= link_to "here", user_connect_path(@user), method: :put %> to connect</h5>
+              <% end %>
+              <% end %>
+              
+              <% else %>
           <ul class="friends">
               <% @user.friends[0,8].each do |friend| %>
           <li>
@@ -120,8 +131,10 @@
           </div>
           </li>
 
-          <% end %>
+          <% end %>  <!-- all friends -->
           </ul>
+          
+              <% end %> <!-- if user friend size = 0 -->
 
           </div>
               </div>
@@ -129,7 +142,7 @@
           <h4 class="test">MEDIA</h4>
           <hr>
           <div class="player-container">
-              <% if @user.media == nil %>
+              <% if @user.media == nil || @user.media == "" %>
               <h5><%= @user.username %> has no media added</h5>
               <% else %>
           <iframe width="100%" height="166" scrolling="no" frameborder="no" src="<%= @user.media %>"></iframe>
