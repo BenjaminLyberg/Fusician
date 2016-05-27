@@ -74,6 +74,10 @@
 
 
           <div class="friendList">
+          <% if @user.friends.size == 0 %>
+          <h5>You have no connections.</h5>
+              <h5>Click <%= link_to "here", search_index_path %> to find your next band buddy</h5>
+              <% else %>
           <ul class="friends">
           <% @user.friends[0,8].each do |friend| %>
           <li>
@@ -85,6 +89,8 @@
 
           <% end %>
           </ul>
+          
+              <% end %>
 
           </div>
         </div>

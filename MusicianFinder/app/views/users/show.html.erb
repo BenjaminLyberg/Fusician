@@ -113,12 +113,17 @@
           <div class="friendList">
               <% if @user.friends.size == 0 %>
               <h5>This Fusician has no connections yet</h5>
+              <% if @user.requested_friends.size > 0 %>
               <% @user.requested_friends.each do |friend| %>
               <% if friend == current_user %>
               <h5>You have requested a connection with <%= @user.username %></h5>
               <% else %>
               <h5>Have you played together? Click <%= link_to "here", user_connect_path(@user), method: :put %> to connect</h5>
               <% end %>
+              <% end %>
+              
+              <% else %>
+              <h5>Have you played together? Click <%= link_to "here", user_connect_path(@user), method: :put %> to connect</h5>
               <% end %>
               
               <% else %>
