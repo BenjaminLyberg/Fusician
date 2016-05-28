@@ -34,16 +34,26 @@
 
   <% end %>
     <% if user_signed_in?%>
+    <% if user.friends_with?(current_user) %>
              <%= link_to user_like_path(user), method: :put, class: "btn btn-default btn-sm" do %>
 
     <span class="glyphicon glyphicon-chevron-up"></span>
     Upvote
               <%= user.get_upvotes.size %>
   <% end %>
+  
+    <% else %>
+    
+     <button disabled class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-thumbs-up"></span>
+               <%= user.get_upvotes.size %>(Connect to upvote)
+               </button>
+    
+    <% end %>
    
    
     
-    
+  
    
     <% end %>
 
