@@ -13,8 +13,7 @@
    <h3>Featured artists</h3>
 </div>
 <div class="row">
-    <% @users.each do |user| %>
-    <% if user.subscribed? %>
+    <% @subscribers[0,8].each do |user| %>
     <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
            <div class="text-center">
@@ -55,7 +54,7 @@
     
   
    
-    <% end %>
+    
 
 
 
@@ -70,4 +69,80 @@
     </div>
     <% end %>
     <% end %>
+    
+    
+    
 </div>
+
+
+<div class="featureHead">
+   <h3>Newly registered artists</h3>
+</div>
+<div class="row">
+    <% @newest[0,8].each do |user| %>
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+           <div class="text-center">
+               <% if user == current_user %>
+               <%= link_to (image_tag user.image.url(:medium)), users_profile_path %>
+               <% else %>
+               <%= link_to (image_tag user.image.url(:medium)), user %>
+               <% end %>
+               <h4 class="userMain" align="center"><%= user.username %></h4>
+               
+
+<div class="btn-group">
+    <%= link_to user_path(user), class: "btn btn-default btn-sm" do %>
+
+    <span class="glyphicon glyphicon-user"></span>
+    Profile
+
+  <% end %>
+    <% if user_signed_in?%>
+    <% if user.friends_with?(current_user) %>
+             <%= link_to user_like_path(user), method: :put, class: "btn btn-default btn-sm" do %>
+
+    <span class="glyphicon glyphicon-chevron-up"></span>
+    Upvote
+              <%= user.get_upvotes.size %>
+  <% end %>
+  
+    <% else %>
+    
+     <button disabled class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-thumbs-up"></span>
+               <%= user.get_upvotes.size %>(Connect to upvote)
+               </button>
+    
+    <% end %>
+   
+   
+    
+  
+   
+    
+
+
+
+
+      </div>
+ 
+      </div>
+
+
+
+        </div>
+    </div>
+    <% end %>
+    <% end %>
+    
+    
+    
+</div>
+
+
+
+
+
+
+

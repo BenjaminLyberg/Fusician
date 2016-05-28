@@ -2,7 +2,8 @@ class UsersController < ApplicationController
     
     def index
         @users = User.all
-        
+        @newest = User.order('created_at DESC')
+        @subscribers = User.where(subscribed: true)
         
         if params[:search]
             @users = User.search(params[:search]).order("created_at DESC")

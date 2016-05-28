@@ -64,18 +64,25 @@
    
     
       
-      
+      </div>
       
        
     <% else %>
-       <!-- No buttons when not signed in --> 
+       <div class="btn-group">
+
+
+
+
+
+
+      </div>
     <% end %>
-
+    
         
-    </div><br><br>
+    <br><br>
 
 
-
+    <div class="text-container">
     <span class="profile-title"><%= @user.instruments %><br><br>
     Age: 28<br><br>
     <%= @user.location %><br><br>
@@ -90,6 +97,7 @@
 
 
     </span>
+    </div>
 
   </div>
   </div>
