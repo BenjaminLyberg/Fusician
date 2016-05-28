@@ -1,16 +1,46 @@
-<% if !user_signed_in?%>
+
+   <div class="col-md-12">
     <div class="jumbotron">
         <h1>Where Musicians Gather</h1>
-        <p>Looking for bandmembers, or just want to show your skills?</p>
+        <h3>Looking for bandmembers, or just want to show your skills?</h3><br>
+        <% if !user_signed_in?%>
         <p><%= link_to "Sign Up To Create Your Profile", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+        <% else %>
+        <p></p>
+        <% end %>
+        <div class="features">
+        <div class="col-md-4">
+        <div class="content">
+            <h4>Find your next band</h4>
+            <h5>Search amongst musicians all over the world to find someone looking for YOU</h5>
+        </div>
+        </div>
+        
+        <div class="col-md-4">
+        <div class="content">
+            <h4>Share your work</h4>
+            <h5>Create your very own music résumé and show off your compositions and contributions</h5>
+        </div>
+        </div>
+        
+        <div class="col-md-4">
+        <div class="content">
+            <h4>Premium promotion</h4>
+            <h5>Subscribe to our premium account and we will make sure to promote you</h5>
+            
+        </div>
+        </div>
+        
+        </div>
     </div>
+    </div>
+    
 
 
-<% end %>
-
-
+<div class="col-md-12">
 <div class="featureHead">
-   <h3>Featured artists</h3>
+   <h2>Featured artists</h2>
+</div>
 </div>
 <div class="row">
     <% @subscribers[0,8].each do |user| %>
@@ -58,7 +88,7 @@
 
 
 
-
+<% end %>
       </div>
  
       </div>
@@ -67,7 +97,7 @@
 
         </div>
     </div>
-    <% end %>
+    
     <% end %>
     
     
@@ -75,8 +105,9 @@
 </div>
 
 
+
 <div class="featureHead">
-   <h3>Newly registered artists</h3>
+   <h2 class="newly">Newly joined artists</h2>
 </div>
 <div class="row">
     <% @newest[0,8].each do |user| %>
@@ -124,7 +155,7 @@
 
 
 
-
+<% end %>
       </div>
  
       </div>
@@ -133,12 +164,16 @@
 
         </div>
     </div>
-    <% end %>
+    
     <% end %>
     
     
     
 </div>
+
+
+
+
 
 
 

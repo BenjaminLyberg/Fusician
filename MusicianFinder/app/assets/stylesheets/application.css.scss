@@ -113,6 +113,7 @@ footer ul {
 
 .jumbotron {
     background-image: url("https://s3.amazonaws.com/fusician/assets/background.jpg");
+    height: 500px;
 
 }
 
@@ -121,9 +122,42 @@ footer ul {
     font-family: 'Lato', sans-serif;
 }
 
+.jumbotron p{
+    height: 44px;
+}
+
 .jumbotron h1 {
     color: #FFFFFF;
     font-family: 'Lato', sans-serif;
+}
+
+.jumbotron h3 {
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+}
+
+.jumbotron h4 {
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    padding: 5px;
+}
+
+.jumbotron h5 {
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    padding: 5px;
+}
+
+.jumbotron .content {
+    border-radius: 5px;
+    float: left;
+    margin-right: 10px;
+    background: rgba(0,0,0,0.5)
+    
+}
+
+.features {
+    padding-top: 80px;
 }
 
 
@@ -136,6 +170,7 @@ footer ul {
 
 .col-md-12 {
     padding-bottom: 50px;
+    padding-left: 0;
 }
 
 .col-md-7 {
@@ -151,7 +186,7 @@ footer ul {
 }
 
 .col-md-4 {
-
+    padding: 0;
 }
 
 .table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
@@ -186,9 +221,15 @@ footer ul {
 
 }
 
-.featureHead h3 {
+.featureHead h2 {
     padding: 20px;
     font-family: 'Lato', sans-serif;
+    
+   
+}
+
+.newly {
+    margin-top: 60px;
 }
 
 .btn-group{
