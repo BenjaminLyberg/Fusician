@@ -55,6 +55,7 @@ input::-webkit-calendar-picker-indicator {
     min-height: 700px;
     font-family: 'Lato', sans-serif;
     background: white;
+    border-radius: 5px;
 
 
 }
@@ -386,7 +387,8 @@ p {
 
 .profile-container {
     background-color: white;
-    text-align: center
+    text-align: center;
+    
 
 }
 
@@ -397,8 +399,6 @@ p {
 
 
 .profile-head {
-
-
   background-color: #f2f2f2;
   color: #444;
   font-family: 'Lato', sans-serif;

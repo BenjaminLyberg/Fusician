@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
     acts_as_votable
     has_friendship
     has_many :comments 
+    
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
@@ -17,5 +18,7 @@ class User < ActiveRecord::Base
     def self.search(search)
         where("location LIKE ?", "%#{search}%") 
     end
-
+    
+    
+  
 end

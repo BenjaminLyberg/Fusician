@@ -12,13 +12,24 @@ class UsersController < ApplicationController
     
     def show
         @user = User.find(params[:id])
+        @requested_friends = @user.requested_friends
+        @requested = ""
+        
+        @requested_friends.each do |friend|
+            if friend == current_user
+                @requested = true
+            else
+                @requested = false
+            end
+        end
+        
+        
     end
     
     def profile
         @user = current_user
     end
     
-   
     
     def userconnections 
         @user = current_user

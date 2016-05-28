@@ -3,6 +3,9 @@
       <div class="content">
        <% if user_signed_in? %>
           
+          
+          <!-- PENDING START -->
+          
           <% if @user.requested_friends.size > 0 %>
           <h4 class="pendingH">Pending connection requests(<%= @user.requested_friends.size %>)</h4>
             <hr>
@@ -27,19 +30,47 @@
                              
                               <% end %>
                               
-                              
-                    
-
-
-
-
-      </div>
+                        </div>
                         
                           
                   </div>
                   <% end %>
           <% end %>
+           
+           
+            <!-- PENDING END -->
+            
+            <!-- REQUESTED START -->
+            
+          <% if @user.pending_friends.size > 0 %>
+          <h4 class="pendingH">Requested connections(<%= @user.pending_friends.size %>)</h4>
+            <hr>
+          <% @user.pending_friends.each do |friend| %>
+                  <div class="thumbnail">
+                    
+                      <%= link_to (image_tag friend.image.url(:thumb)), friend %>
+                          <h5 class="userMain"><%= friend.username %></h5>
+                          
+                        
+                        
+                          
+                  </div>
+                  <% end %>
+          <% end %>
+            
+            <!-- REQUESTED END -->
+           
             <% end %>
+            
+           
+            
+            
+            
+            
+            
+            
+            
+            
         
         
           <h4 class="connectionH">Your connections(<%= @user.friends.size %>)</h4>

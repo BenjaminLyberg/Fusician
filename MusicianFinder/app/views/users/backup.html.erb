@@ -7,65 +7,57 @@
       <% if @user.subscribed? %>
         <span class="premium-badge">Premium</span></h4><br><br>
     <% end %>
+
+        <% if user_signed_in? %>
         
-    <% if user_signed_in? %>
-        
-           <div class="btn-group">
+          <div class="btn-group">
               <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
     <span class="glyphicon glyphicon-envelope"></span>
     Mail
 
-  <% end %>   <!-- Mail button end -->
-  
-               <% if @user.friends_with?(current_user) %>
-               <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
+  <% end %>
+              <% if @user.friends_with?(current_user) %>
+             <%= link_to user_like_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
     <span class="glyphicon glyphicon-thumbs-up"></span>
     Upvote
               <%= @user.get_upvotes.size %>
 
-  <% end %>  <!-- Upvote button end -->
-              
-               <% else %>  <!-- NOT friends with -->
-               
-                <button disabled class="btn btn-default btn-sm">
+  <% end %>
+             
+              <% else %>
+              <button disabled class="btn btn-default btn-sm">
               <span class="glyphicon glyphicon-thumbs-up"></span>
                <%= @user.get_upvotes.size %>(Connect to upvote)
                </button>
-               
-               <%if @user.requested_friends.size > 0 %>
-               <% if @requested %>
-                <button disabled class="btn btn-default btn-sm">
-              <span class="glyphicon glyphicon-music"></span>
-               Connection request sent
-               </button>
-               <% else %>
-                <%= link_to user_connect_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
+              
+              <% end %>
+
+              <%if user_signed_in? %>
+              <%if !@user.friends_with?(current_user)%>
+    
+                  <%= link_to user_connect_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
     <span class="glyphicon glyphicon-music"></span>
     Connect
 
-              <% end %> <!-- Connect button end -->
-              
-               <% end %> <!-- IF Requested end -->
-              
-               <% end %> <!-- IF Requested friends size? -->
-               
-               
-               <% end %> <!-- Friends with? end -->
-               
-               
-   
-   
-    
-      
-      
-      
-       
-    <% else %>
-       <!-- No buttons when not signed in --> 
-    <% end %>
+              <% end %>
 
-        
-    </div><br><br>
+
+  <% end %>
+
+
+<% else %>
+
+              <% end %>
+
+
+
+
+
+      </div>
+             
+              <% end %>
+    </h1><br><br>
+
 
 
 
@@ -93,7 +85,6 @@
         <h4 class="test">ABOUT</h4>
         <hr>
           <%= @user.about %>
-           
 
          <h4 class="test">INSTRUMENTS</h4>
          <hr>
@@ -132,13 +123,13 @@
               <% if @user.friends.size == 0 %>
               <h5>This Fusician has no connections yet</h5>
               <% if @user.requested_friends.size > 0 %>
-              
-              <% if @requested %>
+              <% @user.requested_friends.each do |friend| %>
+              <% if friend == current_user %>
               <h5>You have requested a connection with <%= @user.username %></h5>
               <% else %>
               <h5>Have you played together? Click <%= link_to "here", user_connect_path(@user), method: :put %> to connect</h5>
               <% end %>
-           
+              <% end %>
               
               <% else %>
               <h5>Have you played together? Click <%= link_to "here", user_connect_path(@user), method: :put %> to connect</h5>
