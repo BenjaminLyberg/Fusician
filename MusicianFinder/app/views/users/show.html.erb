@@ -46,6 +46,13 @@
               <% end %> <!-- Connect button end -->
               
                <% end %> <!-- IF Requested end -->
+               
+               <% else %>
+               <%= link_to user_connect_path(@user), method: :put, class: "btn btn-default btn-sm" do %>
+    <span class="glyphicon glyphicon-music"></span>
+    Connect
+             
+               <% end %>
               
                <% end %> <!-- IF Requested friends size? -->
                

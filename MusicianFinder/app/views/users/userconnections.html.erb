@@ -7,7 +7,7 @@
           <!-- PENDING START -->
           
           <% if @user.requested_friends.size > 0 %>
-          <h4 class="pendingH">Pending connection requests(<%= @user.requested_friends.size %>)</h4>
+          <h4 class="pendingH">Incoming connection requests(<%= @user.requested_friends.size %>)</h4>
             <hr>
           <% @user.requested_friends.each do |friend| %>
                   <div class="thumbnail">
@@ -43,7 +43,7 @@
             <!-- REQUESTED START -->
             
           <% if @user.pending_friends.size > 0 %>
-          <h4 class="pendingH">Requested connections(<%= @user.pending_friends.size %>)</h4>
+          <h4 class="pendingH">Your pending  connection requests(<%= @user.pending_friends.size %>)</h4>
             <hr>
           <% @user.pending_friends.each do |friend| %>
                   <div class="thumbnail">
