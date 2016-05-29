@@ -190,9 +190,18 @@
 
 
     </div>
+     
       </div>
-
+<a id="comanch"></a>
+<div class="invisible"></div>
 <div class = "col-md-12">
+ 
+ <div content>
+<% flash.each do |name, msg| %>
+			<%= content_tag(:div, msg, class: "alert alert-info") %>
+		<% end %>
+    </div>
+
  <h3 class="comments_title">
    <%= @user.comments.count %> Comments
  </h3>

@@ -1,6 +1,9 @@
 <div class="panel-body">
 <div class="formBoxEdit">
     <% if current_user.sign_in_count == 1 %>
+    <h2 class="regHead"><% flash.each do |name, msg| %>
+			<%= content_tag(:div, msg, class: "alert alert-info") %>
+		<% end %></h2>
     <h2 class="regHead">Time to set up your profile...</h2>
     <% else %>
 <h2 class="regHead">Edit your profile</h2>
