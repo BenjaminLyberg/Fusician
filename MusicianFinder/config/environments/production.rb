@@ -77,6 +77,21 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_mailer.default_url_options = { host: 'fusician.herokuapp.com' }
+
+  config.action_mailer.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+  :address        => 'smtp.gmail.com',
+  :domain         => 'mail.google.com',
+  :port           => '587',
+  :user_name => ENV["GMAIL_USERNAME"],
+  :password => ENV["GMAIL_PASSWORD"],
+  :authentication => :login,
+  :enable_starttls_auto => true
+
+}
+
   # Sets paperclip to upload images to s3
   # config/environments/production.rb
   config.paperclip_defaults = {
