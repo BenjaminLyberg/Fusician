@@ -208,7 +208,7 @@
 			<%= content_tag(:div, msg, class: "alert alert-info") %>
 		<% end %>
     </div>
-
+ <% if user_signed_in? %>
  <h3 class="comments_title">
    <%= @user.comments.count %> Comments
  </h3>
@@ -216,7 +216,6 @@
  <div id="comments">
    <%= render :partial => @user.comments %>
  </div>
- <% if user_signed_in? %>
 <%= simple_form_for [@user, Comment.new] do |f| %>
 <div class="field">
   <%= f.text_area :body, class: "form-control", cols: "30", rows: "5"  %>
@@ -227,8 +226,7 @@
 <br>
 <%= f.submit "Add Comment", class: "btn btn-primary" %>
 <% end %>
-    <% else %>
-    NOT A USER?
+    
     <% end %>
 </div>
 
