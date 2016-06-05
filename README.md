@@ -42,7 +42,7 @@ Scenario: User edits it's profile
   Then I will be able to update every field in my profile page
   And save the changes I've made.
   
-Scenario: User subscribes to the premim solution
+Scenario: User subscribes to the premium solution
   Given I'm a logged-in user
   When I click on 'Go Premium' in the header
   And click 'pay with card', enter my credentials and click 'pay'
