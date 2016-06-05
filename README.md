@@ -53,7 +53,7 @@ Scenario: User can promote itself
   When other users watch the main page
   I will be visible under 'featured artists'.
 
-Scenario: User can lsiten to other users pieces
+Scenario: User can listen to other users pieces
   Given I visit a users profile page
   And click on an available track
   I will be able to listen to the users song
