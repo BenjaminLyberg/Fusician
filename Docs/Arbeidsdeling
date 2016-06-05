@@ -1,0 +1,10 @@
+Arbeidsdeling gruppe PreBen
+
+Vi har hatt et svært godt samarbeid og er fornøyde med resultatet. 
+I den første tiden møttes vi ofte på skolen, hvor vi kom fram til hva løsningen vår skulle være og hva den skulle inneholde av funksjoner.
+Mesteparten av arbeidet som ble gjort i begynnelsen gjorde vi sammen på en maskin, derav litt skjev commit- statistikk. 
+Etterhvert som løsningen begynte å ta form gikk vi mer over til å kommunisere via facebook/skype. 
+Bruken av Git har vært veldig lærerik og vist oss at det er et utrolig viktig hjelpemiddel ved samarbeid. 
+Et par ting vi gjorde feil i forhold til git var Issues, som vi brukte som en slags backlog av hva som trengte å gjøres, og branching. 
+Vi ser at vi burde ha brukt brancher mye flittigere, og ikke pushet direkte på master ettersom vi slet litt med conflicts.
+Ettersom vi er en gruppe på bare to personer føler vi at vi har fått god innsikt i alle elementene av løsningen. 
