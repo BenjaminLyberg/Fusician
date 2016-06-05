@@ -12,6 +12,7 @@ Site deployed to Heroku, at http://fusician.herokuapp.com
 This assignment has made us face many issues for the first time, and shown us a great deal of how powerful Rails are.
 The main surprise was how fast you can go from nothing to something that works, and use different gems to create a unique solution.
 
+
 Some of the cool functions we've added so far is
 - User registration                 (Devise)
 - Image uploading                   (Paperclip)
@@ -29,3 +30,10 @@ ideas for future modifications are
 - Ability to customize own profile even more, with more photos etc.
 - Messaging system for interaction between users
 - Various design changes
+
+
+ADMIN ACCESS
+
+To get access to the admin panel, log in on http://fusician.herokuapp.com as admin@admin.no, with the password "passord1". Then proceed to http://fusician.herokuapp.com/admins
+In the admin panel you have the ability to create new, delete or edit all Users or comments created in the webapp. 
+
