@@ -34,7 +34,7 @@ ideas for future modifications are
 
 
 USER STORIES (Gherkin)
-
+```cucumber
 Scenario: User edits it's profile
   Given I'm a logged-in user
   When I click on the cogwheel in the header
@@ -69,7 +69,7 @@ Scenario: User can search for other musicians
   Given I visit the "search" page
   And type in the location of my choice and click "search"
   Then I will be able to browse all musicians in the given location.
-
+```
 
   
 
