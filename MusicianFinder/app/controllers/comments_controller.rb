@@ -4,6 +4,10 @@ class CommentsController < ApplicationController
 
   # POST /comments
   # POST /comments.json
+    def index
+        @comments = Comment.all
+    end
+    
     def create
     
         @user = User.find(params[:user_id])  
