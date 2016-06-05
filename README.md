@@ -48,6 +48,7 @@ ideas for future modifications are
 - Ability to customize own profile even more, with more photos etc.
 - Give premium users more features on their profile pages, as promised in the subscribtion option.
 - Private messaging system for interaction between users (represented by the mail-icon in profile page - this icon now links to the upvote action)
+- More possible locations to choose from. 
 - Various design changes
 
 
