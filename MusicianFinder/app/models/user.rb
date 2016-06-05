@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
     acts_as_votable
     has_friendship
     has_many :comments
-    default_scope { order(:created_at => :desc) }
+    default_scope { order(:subscribed => :desc) }
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
