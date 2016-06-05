@@ -29,14 +29,53 @@ ideas for future modifications are
 - Ability to search for other critera than location
 - Ability to customize own profile even more, with more photos etc.
 - Give premium users more features on their profile pages, as promised in the subscribtion option.
-- Private messaging system for interaction between users
+- Private messaging system for interaction between users (represented by the mail-icon in profile page - this icon now links to the upvote action)
 - Various design changes
 
 
+USER STORIES (Gherkin)
+
+Scenario: User edits it's profile
+  Given I'm a logged-in user
+  When I click on the cogwheel in the header
+  And click on 'edit profile'
+  Then I will be able to update every field in my profile page
+  And save the changes I've made.
+
+Scenario: User can promote itself
+  Given I'm a logged-in user with a premium subscribtion
+  When other users watch the main page
+  I will be visible under 'featured artists'.
+
+Scenario: User can lsiten to other users pieces
+  Given I visit a users profile page
+  And click on an available track
+  I will be able to listen to the users song
+
+Scenario: User can connect with other users
+  Given I'm a logged-in user 
+  When I go to other user profiles 
+  And click "connect" 
+  Then a request to connect will be sent to the user.
+
+Scenario: User can upvote other users
+  Given I'm a logged-in user
+  And connected to another user
+  When I go to this users profile
+  And click "Upvote"
+  Then their upvote-count will increment. 
+
+Scenario: User can search for other musicians 
+  Given I visit the "search" page
+  And type in the location of my choice and click "search"
+  Then I will be able to browse all musicians in the given location.
+
+
+  
 
 ADMIN ACCESS
 
-To get access to the admin panel, log in on http://fusician.herokuapp.com as admin@admin.no, with the password "passord1". Then proceed to http://fusician.herokuapp.com/admins
+To get access to the admin panel, log in on http://fusician.herokuapp.com as admin@admin.no, with the password "passord1". Then proceed to http://fusician.herokuapp.com/admins.
 In the admin panel you have the ability to create new, delete or edit all Users or comments created in the webapp. 
 
 
