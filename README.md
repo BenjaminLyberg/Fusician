@@ -41,6 +41,12 @@ Scenario: User edits it's profile
   And click on 'edit profile'
   Then I will be able to update every field in my profile page
   And save the changes I've made.
+  
+Scenario: User subscribes to the premim solution
+  Given I'm a logged-in user
+  When I click on 'Go Premium' in the header
+  And click 'pay with card', enter my credentials and click 'pay'
+  I will become a premium user
 
 Scenario: User can promote itself
   Given I'm a logged-in user with a premium subscribtion
@@ -57,6 +63,19 @@ Scenario: User can connect with other users
   When I go to other user profiles 
   And click "connect" 
   Then a request to connect will be sent to the user.
+  
+Scenario: User can see amount of pending requests on main page
+  Given I'm a logged-in user
+  And other users have sent me a request to connect
+  Then a counter next to 'connections' in header will show
+  And increment based on amount of requests
+  
+Scenario: User can accept incoming connection requests
+  Given I'm a logged in user
+  And other users have sent me a request to connect
+  When I go to the 'connections' page
+  Then and overview of pending requests will be shown
+  And I can choose to accept or deny the request
 
 Scenario: User can upvote other users
   Given I'm a logged-in user
@@ -69,6 +88,8 @@ Scenario: User can search for other musicians
   Given I visit the "search" page
   And type in the location of my choice and click "search"
   Then I will be able to browse all musicians in the given location.
+  
+  
 ```
 
   
