@@ -13,6 +13,24 @@ This assignment has made us face many issues for the first time, and shown us a 
 The main surprise was how fast you can go from nothing to something that works, and use different gems to create a unique solution.
 
 
+
+#####HOW TO USE WEB APPLICATION
+
+Register by clicking 'Sign up'. Fill out the form (all fields, including profile picture are required). When registered, add every 
+detail you want to your profile (the more details, the more interesting you will look to others). Save your changes and your
+profile is all set up. 
+To browse premium users or newly registered users go to "Musicians". To search for musicians in the location of your choice, click the
+search tab. Write your location on the form "City, Country" and hit "search". From here you can browse every musician registered from
+the chosen location. 
+Click on a profile if you want to get more details about a particular musicians. From the users profile page you get the chance to 
+browse their info, listen to their pieces posted on Soundcloud, post a comment and connect with them. To connect with the musician, 
+simply click the "Connect" button. The user will then be notified that you have requested a connection. 
+If you have incoming connection requests, a notification badge will be shown next to the "connections" tab. 
+If you want more out of your Fusician-experience, click "Go premium" in the top right corner. Here you will get the opportunity to 
+subscribe to our Premium solution, getting your profile thumb right at the top of the main page and making sure you will end up
+first in the search results. More premium features are in the making. 
+
+
 Some of the cool functions we've added so far is
 - User registration                 (Devise)
 - Image uploading                   (Paperclip)
